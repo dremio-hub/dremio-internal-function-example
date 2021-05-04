@@ -2,9 +2,18 @@
 
 [![Build Status](https://travis-ci.org/dremio-hub/dremio-internal-function-example.svg?branch=master)](https://travis-ci.org/dremio-hub/dremio-internal-function-example)
 
-This shows an example a customer function using Dremio's internal APIs. The example has the signature example_concat_op(<varchar>, <varchar) and returns a new varchar. It can be used by copying the built jar file into the Dremio jars directory.
+This shows an example a customer function using Dremio's internal APIs.
 
-Example Usage:
+## Example Usage:
+* Purpose:
+   * Demonstrate how to return a Runid for a specific date
+   
+* Usage example
 ```
 SELECT example_concat_op(name, kind) FROM sys.options 
 ```
+
+## To Build and deploy
+mvn clean package 
+cp {target dir}/udf-example*jar /Java/dremio/jars/3rdparty 
+restart dremio
