@@ -25,7 +25,7 @@ import com.dremio.exec.expr.annotations.FunctionTemplate.NullHandling;
 import com.dremio.exec.expr.annotations.Output;
 import com.dremio.exec.expr.annotations.Param;
 
-import io.netty.buffer.ArrowBuf;
+import  org.apache.arrow.memory.ArrowBuf;
 
 @FunctionTemplate(
     name = "example_concat_op",
