@@ -5,15 +5,12 @@
 This shows an example a customer function using Dremio's internal APIs.
 
 ## Example Usage:
-* Purpose:
-   * Demonstrate how to return a Runid for a specific date
-   
-* Usage example
+* Purpose: Demonstrate how to execute example UDF example_concat_op(string1, string2)
 ```
 SELECT example_concat_op(name, kind) FROM sys.options 
 ```
 
 ## To Build and deploy
-mvn clean package 
-cp {target dir}/udf-example*jar /Java/dremio/jars/3rdparty 
-restart dremio
+1. mvn clean package 
+2. cp {target dir}/udf-example*jar   /opt/dremio/jars/3rdparty/. 
+3. restart dremio
