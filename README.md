@@ -10,7 +10,12 @@ This shows an example a customer function using Dremio's internal APIs.
 SELECT example_concat_op(name, kind) FROM sys.options 
 ```
 
-## To Build and deploy
-1. mvn clean package 
-2. cp {target dir}/udf-example*jar   /opt/dremio/jars/3rdparty/. 
-3. restart dremio
+## To Build (on Dremio Coordinatpr Node)
+1. yum install maven 
+2. Change pom.xml : Replace Dremio Version 
+3. mvn clean package 
+4. Will Create 2 Jar Files  (udf-example-<dremio-ver>.jar and udf-example-<dremio-ver>-sources.jar)
+
+## To Deploy
+1. cp {target dir}/udf-example*jar   /opt/dremio/jars/3rdparty/.  (On Coordinator and Executor Nodes)
+2. systemctl start dremio (On Coordinator and Executor Nodes)
