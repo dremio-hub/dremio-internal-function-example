@@ -14,7 +14,7 @@ SELECT example_concat_op(name, kind) FROM sys.options
 1. yum install maven 
 2. Change pom.xml : Replace Dremio Version 
 3. mvn clean package 
-4. Will Create 2 Jar Files  (udf-example-<dremio-ver>.jar and udf-example-<dremio-ver>-sources.jar)
+4. Will Create 2 Jar Files  (udf-example-dremio-ver.jar and udf-example-dremio-ver-sources.jar)
 
 ## To Deploy
 1. cp {target dir}/udf-example*jar   /opt/dremio/jars/3rdparty/.  (On Coordinator and Executor Nodes)
